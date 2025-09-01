@@ -34,7 +34,7 @@ function App() {
           <Route path="/TvShows" element={<div>TV Shows</div>} />
           <Route path="/Movies" element={<div>Movies</div>} />
           <Route path="/Games" element={<div>Games</div>} />
-          <Route path="/New & Popular" element={<div>New & Popular</div>} />
+          <Route path="/New&Popular" element={<div>New & Popular</div>} />
           <Route path="/My List" element={<div>My List</div>} />
           <Route path="/Browse by Languages" element={<div>Browse by Languages</div>} />
         </Routes>
