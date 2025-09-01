@@ -1,0 +1,69 @@
+.nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding: 20px;
+    height:30px;
+    z-index:1;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: rgba(51,51,51,0.3);
+
+    /*Animation*/
+    transition-timing-function:ease-in;
+    transition: all 0.5s;
+   
+}
+
+.nav__black {
+    background-color: #111; /*snaps in a blackground when user scrolls down*/
+}
+
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.nav__logo-and-links {
+    position:fixed;
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+    margin:0;
+}
+
+.nav__logo {
+    left:0;
+    width:200px;
+    object-fit:contain;
+}
+
+.nav__links {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Adds a 10px gap between nav bar links */
+}
+
+.nav__links a {
+    color: #e5e5e5;
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 500;
+    transition: color 0.4s;
+    white-space: nowrap;
+}
+
+.nav__avatar {
+    position:fixed;
+    right:20px;
+    width:30px;
+    object-fit:contain;
+}
+
+.nav__links a:hover {
+    color: rgba(127, 123, 123,.8);
+}
