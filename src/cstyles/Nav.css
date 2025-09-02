@@ -68,10 +68,14 @@
     color: rgba(127, 123, 123,.8);
 }
 
+.nav__links-dropdown {
+    display: none;
+}
+
 
 @media (max-width: 768px) {
     .nav__logo {
-        width: 150px;
+        width: 90px;
     }
 
     .nav__links {
@@ -117,6 +121,6 @@
 /* Further adjustments for screens smaller than 550px */
 @media (max-width: 550px) {
     .nav__logo {
-        width: 120px;
+        width: 80px;
     }
 }
