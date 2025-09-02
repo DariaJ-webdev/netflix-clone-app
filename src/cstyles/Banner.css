@@ -63,4 +63,53 @@
     );
 
 }
+
+/* Recommendations for 768px and smaller */
+@media (max-width: 768px) {
+    .banner {
+        height: 400px;
+    }
+
+    .banner__contents {
+        padding-top: 100px;
+        margin-left: 20px;
+    }
+
+    .banner__title {
+        font-size: 2.5rem;
+    }
+
+    .banner__description {
+        font-size: 0.7rem;
+        width: auto;
+    }
+}
+
+/* Recommendations for 550px and smaller */
+@media (max-width: 550px) {
+    .banner {
+        height: 300px;
+    }
+
+    .banner__contents {
+        padding-top: 60px;
+        margin-left: 15px;
+    }
+
+    .banner__title {
+        font-size: 2rem;
+    }
+
+    .banner__description {
+        max-width: 90%;
+        line-height: 1.2;
+    }
+
+    .banner__button {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
   

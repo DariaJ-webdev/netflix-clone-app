@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 
 function Nav() {
   const [show, handleShow] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen]  = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,6 +21,10 @@ function Nav() {
     };
   }, []);
 
+   const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <div className={`nav ${show && "nav__black"}`}>
       <div className="nav__container">
@@ -28,7 +33,17 @@ function Nav() {
       className="nav__logo"
       src={logo}
       alt="Netflix Logo"/>
-      <div className="nav__links">
+
+       <div className="nav__links-container">
+              <div 
+                className="nav__links-dropdown" 
+                onClick={handleDropdownToggle}
+              >
+                <span>Browser</span>
+                <span className="dropdown-arrow">{isDropdownOpen ? '▲' : '▼'}</span> 
+              </div>
+      
+      <div className={`nav__links ${isDropdownOpen ? 'nav__links--open' : ''}`}>
       <Link to="/">Home</Link>
       <Link to="/TvShows">TV Shows</Link>
       <Link to="/Movies"> Movies</Link>
@@ -37,6 +52,7 @@ function Nav() {
       <Link to="/My List">My List</Link>
       <Link to="/Browse by Languages">Browse by Languages</Link>
       </div>   
+      </div>
       </div>
 
       <img className="nav__avatar"

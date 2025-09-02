@@ -67,3 +67,56 @@
 .nav__links a:hover {
     color: rgba(127, 123, 123,.8);
 }
+
+
+@media (max-width: 768px) {
+    .nav__logo {
+        width: 150px;
+    }
+
+    .nav__links {
+        display: none; /* Hide the full navigation links by default */
+    }
+
+    /* Styles for the new "Browser" button */
+    .nav__links-dropdown {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: #e5e5e5;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        transition: color 0.4s;
+    }
+
+    .nav__links-dropdown:hover {
+        color: rgba(127, 123, 123,.8);
+    }
+
+    /* Styles for the dropdown menu when it is open */
+    .nav__links--open {
+        display: flex;
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        top: 60px; /* Adjust this value to position it below the nav bar */
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+    
+    .nav__links--open a {
+        padding: 10px 15px;
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* Further adjustments for screens smaller than 550px */
+@media (max-width: 550px) {
+    .nav__logo {
+        width: 120px;
+    }
+}
